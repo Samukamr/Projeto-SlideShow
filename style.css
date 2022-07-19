@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+header {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ccc;
+}
+.header {
+    height: 30px;
+    background-color: #ff0000;
+}
+.slider {
+    flex: 1;
+    overflow: hidden; /*cortar tudo que passa do tamanho da tela*/
+}
+.slider--width {
+    height: 100%;
+    display: flex;
+    transition: all ease 0.3s; /*transição*/
+}
+.slider--item {
+    width: 100vw;
+    height: inherit;
+    background-position: center; /*alinhar a imagem*/
+    background-size: cover;  /*ajustar a imagem*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 0px 1px 1px #333;
+    font-size: 50px;
+}
+.slider--controls {
+    position: absolute; /* pra ficar acima*/
+    z-index: 99; /* pra ficar acima da foto*/
+    width: 100%; /* pegar a largura da tela inteira */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slider--control {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer; /*mãozinha*/
+}
